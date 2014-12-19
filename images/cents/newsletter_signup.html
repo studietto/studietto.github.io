@@ -1,0 +1,35 @@
+<html>
+<head>
+	<script type="text/javascript">
+		function validateForm()
+		{
+			var x = document.forms["mad_mimi_signup_form"]["signup_email"].value;
+			if (x==null || x=="")
+			{
+				alert("A valid email address is required!");
+				return false;
+			}
+			if (!validateEmail(x))
+			{
+				alert("This does not look like a valid email address :(");
+				return false;
+			}
+		}
+		
+		function validateEmail(email)
+		{ 
+			var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+			return re.test(email);
+		} 
+	</script>
+</head>
+
+<body>
+
+<form action="https://madmimi.com/signups/subscribe/68632" id="mad_mimi_signup_form" method="post" onsubmit="return validateForm()" >
+<input class="required" id="signup_email" name="signup[email]" placeholder="you@example.com" type="text" />
+<input class="submit" data-default-text="Sign up!" data-invalid-text="↑ You forgot some required fields" data-submitting-text="Sending…" id="webform_submit_button" type="submit" value="Sign up!" />
+</form>
+
+</body>
+</html>	

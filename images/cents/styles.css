@@ -1,0 +1,399 @@
+* /* For CSS Reset */
+{
+padding: 0;
+margin: 0;
+}
+
+html, body
+{
+width: 100%;
+height: 100%;
+}
+
+a
+{
+outline: none;
+}
+
+div#wrapper
+{
+width: 100%;
+height: 100%;
+min-height: 100%; /* For Sticky Footer */
+height: auto !important; /* For Sticky Footer */
+margin: 0 auto -70px; /* For Sticky Footer */
+}
+
+div#menu
+{
+width: 100%;
+height: 0px;
+background-color: grey;
+text-align: center;
+position: fixed;
+display: hidden;
+}
+
+div#header
+{
+width: 100%;
+height: 720px;
+text-align: center;
+padding-top: 0px;
+background-image: url(images/header.jpeg);
+background-position: center;
+background-repeat: no-repeat;
+}
+
+div#header_content
+{
+overflow: auto;
+margin: 0 auto;
+width: 1080px;
+text-align: left
+}
+
+div#app_details
+{
+margin-top: 140px;
+margin-left: 700px;
+width: 360px;
+}
+
+div#app_details h1
+{
+display: block;
+padding-top: 20px;
+padding-left: 5px;
+font-family: "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", "Arial Regular", arial;
+font-weight: normal;
+font-size: 22px;
+color: #ffffff;
+opacity: 0.96;
+text-shadow: 1px 1px 2px rgba(0,0,0,0.72);
+filter: dropshadow(color=#000000, offx=1, offy=1);    
+}
+
+div#content
+{
+width: 1080px;
+margin: 0 auto;
+padding-top: 120px;
+outline: 0px solid black;
+text-align: center;
+}
+
+img#iphones
+{
+display: block;
+margin-left: auto;
+margin-right: auto;
+}
+
+span#newsletter_invite
+{
+outline: none;
+display: block;
+margin-top: 85px;
+font-family: "HelveticaNeueMedium", "HelveticaNeue-Medium", "Helvetica Neue Medium", "HelveticaNeue", "Helvetica Neue", "Arial Bold", arial;
+font-size: 30px;
+color: #808080;
+opacity: 1.0;
+}
+
+a#join_beta
+{
+outline: none;
+display: block;
+margin-top: 10px;
+font-family: "HelveticaNeueMedium", "HelveticaNeue-Medium", "Helvetica Neue Medium", "HelveticaNeue", "Helvetica Neue", "Arial Bold", arial;
+font-size: 18px;
+color: #808080;
+opacity: 1.0;
+text-decoration:none;
+}
+
+a#join_beta:hover
+{
+color: #3d3d3d;
+}
+
+div#social_buttons
+{
+	outline: none;
+	margin-top: 50px;
+}
+
+a#contact
+{
+outline: none;
+display: block;
+margin-top: 30px;
+font-family: "HelveticaNeueMedium", "HelveticaNeue-Medium", "Helvetica Neue Medium", "HelveticaNeue", "Helvetica Neue", "Arial Bold", arial;
+font-size: 12px;
+color: #7a7a7a;
+opacity: 1.0;
+text-decoration:none;
+}
+
+a#contact:hover
+{
+color: #3d3d3d;
+}
+
+span#copyright
+{
+outline: none;
+display: block;
+margin-top: 20px;
+font-family: "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", "Arial Regular", arial;
+font-size: 12px;
+color: #7a7a7a;
+opacity: 1.0;
+}
+
+div.content_columns
+{
+outline: 0px solid black;
+text-align: left;
+line-height: 30px;
+font-size: 21px;
+font-family: "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", "Arial Regular", arial;
+float: left;
+color: #808080;
+opacity: 1.0;
+}
+
+div.clear_floats /* For Clearing Floats */
+{
+clear: both;
+}
+
+div#footer
+{
+outline: none;
+width: 100%;
+height: 70px;
+outline: 0px solid black;
+text-align: center;
+}
+
+div#signup_form
+{
+min-height:120px;
+border: solid 1px #ffffff;
+}
+
+div#email_field
+{
+margin: 50px auto;
+width: 428px;
+height: 54px;
+padding: 5px 5px 0 5px;
+background-image: url(images/text_box.png);
+background-repeat: no-repeat;
+}
+
+#email
+{
+float: left;
+background: none;
+padding-left: 5px;
+border: 0;
+width: 300px;
+height: 44px;
+font-family: "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", "Arial Regular", arial;
+font-size: 24px;
+color: #5c5c5c;
+opacity: 1.0;
+}
+
+#email:focus
+{
+outline: none;
+}
+
+#error
+{
+outline: none;
+display: none;
+height: 30px;
+margin-top: -30px;
+font-family: "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", "Arial Regular", arial;
+font-size: 14px;
+color: red;
+}
+
+#signup_result
+{
+outline: none;
+display: none;
+margin: 30px auto;
+font-family: "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", "Arial Regular", arial;
+font-size: 24px;
+color: #5c5c5c;
+opacity: 1.0;
+}
+
+.placeholder
+{
+
+}
+
+.placeholderFocus
+{
+
+}
+
+#email_submit
+{
+outline: none;
+float: right;
+overflow: hidden;
+margin: -3px 6px 2px;
+border: 0;
+background-color: transparent;
+background-image: url(images/signup_button_normal.png);
+background-repeat: no-repeat;
+cursor: pointer;
+width: 104px;
+height: 50px;
+font-family: "HelveticaNeueMedium", "HelveticaNeue-Medium", "Helvetica Neue Medium", "HelveticaNeue", "Helvetica Neue", "Arial Bold", arial;
+font-size: 18px;
+color: #3d3d3d;
+opacity: 1.0;
+text-shadow: 1px 1px 1px rgba(255,255,255,0.72);
+filter: dropshadow(color=#ffffff, offx=1, offy=1);    
+}
+
+#email_submit:hover
+{
+background-image: url(images/signup_button_mouseovered.png);
+}
+
+#email_submit:active
+{
+background-image: url(images/signup_button_pressed.png);
+}
+
+div.push /* For Sticky Footer */
+{
+height: 70px;
+}
+
+#appstore1
+{
+outline: none;
+margin-top: 25px;
+overflow: hidden;  
+border: 0;
+background-color: transparent;
+cursor: pointer;
+width: 250px;
+height: 95px;
+background-image: url(images/appstore1_normal.png);
+background-repeat: no-repeat;
+}
+
+#appstore1:hover
+{
+background-image: url(images/appstore1_mouseovered.png);
+}
+
+#appstore1:active
+{
+background-image: url(images/appstore1_pressed.png);
+}
+
+#appstore2
+{
+outline: none;
+margin-top: 85px;
+overflow: hidden;  
+border: 0;
+background-color: transparent;
+cursor: pointer;
+width: 250px;
+height: 95px;
+background-image: url(images/appstore2_normal.png);
+background-repeat: no-repeat;
+}
+
+#appstore2:hover
+{
+background-image: url(images/appstore2_mouseovered.png);
+}
+
+#appstore2:active
+{
+background-image: url(images/appstore2_pressed.png);
+}
+
+/* support for retina display */
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+	div#header
+	{
+	background-image: url(images/header@2x.jpeg);
+	background-size: 2560px 720px;
+	}
+
+	div#email_field
+	{
+	background-image: url(images/text_box@2x.png);
+	background-size: 428px 54px;
+	}
+
+	#email_submit
+	{
+	background-image: url(images/signup_button_normal@2x.png);
+	background-size: 104px 50px;
+	}
+
+	#email_submit:hover
+	{
+	background-image: url(images/signup_button_mouseovered@2x.png);
+	background-size: 104px 50px;
+	}
+
+	#email_submit:active
+	{
+	background-image: url(images/signup_button_pressed@2x.png);
+	background-size: 104px 50px;
+	}
+	
+	#appstore2
+	{
+	background-image: url(images/appstore2_normal@2x.png);
+	background-size: 500px 190px;
+	}
+
+	#appstore2:hover
+	{
+	background-image: url(images/appstore2_mouseovered@2x.png);
+	background-size: 500px 190px;
+	}
+
+	#appstore2:active
+	{
+	background-image: url(images/appstore2_pressed@2x.png);
+	background-size: 500px 190px;
+	}	
+	
+	#appstore1
+	{
+	background-image: url(images/appstore1_normal@2x.png);
+	background-size: 500px 190px;
+	}
+
+	#appstore1:hover
+	{
+	background-image: url(images/appstore1_mouseovered@2x.png);
+	background-size: 500px 190px;
+	}
+
+	#appstore1:active
+	{
+	background-image: url(images/appstore1_pressed@2x.png);
+	background-size: 500px 190px;
+	}	
+}
