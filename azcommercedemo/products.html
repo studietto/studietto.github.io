@@ -31,7 +31,7 @@
 		  
 		  function toggleNotifyTag(chk, id) {
 			UA.then(function(sdk) {
-				if (sdk.channel.optedIn && chk.checked) {
+				if (!sdk.channel.optedIn && chk.checked) {
 					alert("You need to accept the browser permission request before being able to use this...");
 					chk.checked = false;
 					console.log("Notifications not enabled, nothing to do...");
