@@ -30,18 +30,22 @@
 		  })
 		  
 		  function toggleNotifyTag(chk, id) {
-		  	if (sdk.channel.optedIn && chk.checked) {
-		  		alert("You need to accept the browser permission request before being able to use this...");
-		  		chk.checked = false;
-			  	console.log("Notifications not enabled, nothing to do...");
-		  		return;
-		  	}
-		  		
-		  	if (chk.checked) {
-		  		console.log("added notifications for productId " + id);
-		  	} else {
-		  		console.log("removed notifications for productId " + id);
-		  	}
+			UA.then(function(sdk) {
+				if (sdk.channel.optedIn && chk.checked) {
+					alert("You need to accept the browser permission request before being able to use this...");
+					chk.checked = false;
+					console.log("Notifications not enabled, nothing to do...");
+					return;
+				}
+				
+				if (chk.checked) {
+					console.log("added notifications for productId " + id);
+				} else {
+					console.log("removed notifications for productId " + id);
+				}
+			}).catch(function(err) {
+			  console.log(err)
+		    })
 		  }
 		</script>	
 	</body>
