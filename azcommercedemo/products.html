@@ -5,9 +5,9 @@
 	</body>
 		<h1>Products</h1>
 		<ul>
-			<li>Product 123 <input id="chkProduct123" type="checkbox" onclick="toggleNotifyTag(this, '123');">Notify</input></li>
-			<li>Product 456 <input id="chkProduct123" type="checkbox" onclick="toggleNotifyTag(this, '456');">Notify</input></li>
-			<li>Product 789 <input id="chkProduct123" type="checkbox" onclick="toggleNotifyTag(this, '789');">Notify</input></li>									
+			<li>Product 123 <input id="chkNotifyInStock123" type="checkbox" onclick="toggleNotifyTag(this, '123');">Notify</input></li>
+			<li>Product 456 <input id="chkNotifyInStock456" type="checkbox" onclick="toggleNotifyTag(this, '456');">Notify</input></li>
+			<li>Product 789 <input id="chkNotifyInStock789" type="checkbox" onclick="toggleNotifyTag(this, '789');">Notify</input></li>									
 		</ul>
 		<script type="text/javascript">
 		// 86acbd31cd7c09cf30acb66d2fbedc91daa48b86:1528734103.65
@@ -23,8 +23,13 @@
 		</script>
 		<script type="text/javascript">
 		  UA.then(function(sdk) {
-		  	if (sdk.isSupported && sdk.canRegister)
+		  	if (sdk.isSupported && sdk.canRegister) {
 				sdk.register();
+				
+				document.getElementById("chkNotifyInStock123").checked = sdk.channel.tags.has("notify-instock-123");
+				document.getElementById("chkNotifyInStock456").checked = sdk.channel.tags.has("notify-instock-456");
+				document.getElementById("chkNotifyInStock789").checked = sdk.channel.tags.has("notify-instock-789");
+			}
 		  }).catch(function(err) {
 			  console.log(err)
 		  })
@@ -38,9 +43,12 @@
 					return;
 				}
 				
+				var tag = "notify-instock-" + id;
 				if (chk.checked) {
+					sdk.channel.tags.add(tag);
 					console.log("added notifications for productId " + id);
 				} else {
+					sdk.channel.tags.remove(tag);
 					console.log("removed notifications for productId " + id);
 				}
 			}).catch(function(err) {
