@@ -5,9 +5,9 @@
 	</body>
 		<h1>Products</h1>
 		<ul>
-			<li>Product 123 <input id="chkProduct123" type="checkbox">Notify</input></li>
-			<li>Product 456 <input id="chkProduct123" type="checkbox">Notify</input></li>
-			<li>Product 789 <input id="chkProduct123" type="checkbox">Notify</input></li>									
+			<li>Product 123 <input id="chkProduct123" type="checkbox" onclick="toggleNotifyTag(this, '123');">Notify</input></li>
+			<li>Product 456 <input id="chkProduct123" type="checkbox" onclick="toggleNotifyTag(this, '456');">Notify</input></li>
+			<li>Product 789 <input id="chkProduct123" type="checkbox" onclick="toggleNotifyTag(this, '789');">Notify</input></li>									
 		</ul>
 		<script type="text/javascript">
 		// 86acbd31cd7c09cf30acb66d2fbedc91daa48b86:1528734103.65
@@ -23,10 +23,26 @@
 		</script>
 		<script type="text/javascript">
 		  UA.then(function(sdk) {
-			  sdk.register();
+		  	if (sdk.isSupported && sdk.canRegister)
+				sdk.register();
 		  }).catch(function(err) {
 			  console.log(err)
 		  })
+		  
+		  function toggleNotifyTag(chk, id) {
+		  	if (sdk.channel.optedIn && chk.checked) {
+		  		alert("You need to accept the browser permission request before being able to use this...");
+		  		chk.checked = false;
+			  	console.log("Notifications not enabled, nothing to do...");
+		  		return;
+		  	}
+		  		
+		  	if (chk.checked) {
+		  		console.log("added notifications for productId " + id);
+		  	} else {
+		  		console.log("removed notifications for productId " + id);
+		  	}
+		  }
 		</script>	
 	</body>
 </html>
