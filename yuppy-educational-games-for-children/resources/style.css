@@ -559,3 +559,7 @@ ul {
     position: absolute;
     max-width: 1280px;
 }
+
+.download-appstore {
+	margin-top: 30px;
+}
