@@ -1,158 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<title>Cents - Beautiful, essential and intuitive micro-expense tracker for iPhone</title>
-<meta http-equiv="Cache-Control" content="no-cache" />
-<link rel="Shortcut Icon" type="image/ico" href="/favicon.ico" />
-<link rel="apple-touch-icon" href="images/cents/images/icon57.png" />
-<link rel="apple-touch-icon" sizes="114x114" href="images/cents/images/icon114.png" />
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-<script src="js/jquery.placeholder.js"></script>
-<link rel="stylesheet" type="text/css" href="images/cents/styles.css?v=18">
-
-<script type="text/javascript">
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-2690839-8']);
-  _gaq.push(['_setDomainName', 'studietto.com']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-  
-  jQuery(document).ready(function($) {
-  	$(":input[placeholder]").placeholder();
-  }); 
-  
-  function signupNewsletter()
-  {
-    var error = $("#error");
-    error.text("").hide();
-    
-    var x = $("#email").val();
-    if (x==null || x=="")
-    {
-        error.text("A valid email address is required").show();
-        return;
-    }
-    if (!validateEmail(x))
-    {
-        error.text("This does not look like a valid email address :(").show();
-        return;
-    }
-    
-    $.ajax({
-      url: "madmimi/signup.php",
-      data: {"list": "cents", "email": x}
-    });
-    
-    $("#email_field").fadeOut(
-    	function()
-    	{
-			$("#signup_result").fadeIn();
-    	});    	
-  }
-		
-  function validateEmail(email)
-  { 
-    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(email);
-  }
-</script>
-
-<script type="text/javascript">
-
-var _tsq = _tsq || [];
-_tsq.push(["setAccountName", "studietto"]);
-_tsq.push(["fireHit", "javascript_tracker", []]);
-
-(function() {
-    function z(){
-        var s = document.createElement("script");
-        s.type = "text/javascript";
-        s.async = "async";
-        s.src = window.location.protocol + "//cdn.tapstream.com/static/js/tapstream.js";
-        var x = document.getElementsByTagName("script")[0];
-        x.parentNode.insertBefore(s, x);
-    }
-    if (window.attachEvent)
-        window.attachEvent("onload", z);
-    else
-        window.addEventListener("load", z, false);
-})();
-
-</script>
-
+	<meta charset="utf-8" />
+	<title>Studietto - Awesome mobile apps for iOS and Android</title>
+	<meta http-equiv="Cache-Control" content="no-cache" />
+	<meta name="apple-itunes-app" content="app-id=1483779408"/>
+	<meta name="Nova theme" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="style.css">
 </head>
 
-<body id="index">
-<div id="wrapper">
-    <div id="menu"></div>
-    <div id="header">
-    	<div id="header_content">
-    		<div id="app_details">
-    			<img src="images/cents/images/app_details.png" alt="Cents" />
-    			<h1>Keeping track of everyday expenses shouldn't be work.
-    			That's why Cents has a gorgeous interface with preset buttons to record
-    			where your money goes in just a tap. Then view your weekly or monthly expenses as an itemized receipt!
-    			</h1>
-    			<a href="http://taps.io/ODc5NDU"><img id="appstore1" src="images/cents/images/spacer.gif" alt="Download Cents" /></a>
-    		</div>
-    	</div>
-    </div>
-    <div id="content">    
-		<img id="iphones" src="images/cents/images/iphones.jpeg" alt="Cents screenshots" />
-		
-		<div id="content3"> 
-        <div id="col1" class="content_columns" style="width: 255px; margin-left: 60px">Quickly switch between weekly and monthly totals. Add custom expenses with only one tap.</div>
-        <div id="col2" class="content_columns" style="width: 320px; margin-left: 70px">Configure pre-set expense buttons for quick usage (we challange you to find a faster app!). Customize amount and icon for each button.</div>
-        <div id="col3" class="content_columns" style="width: 255px; margin-left: 60px">See and track your most frequent expenses. Monthly stats that show you how you spent all that money.</div>
-        <div class="clear_floats"></div> <!-- For Clearing Floats -->
-        </div>
+<body>
+	<h1>iOS apps</h1>
+	
+	<div class="app-row">		
+		<a href="./yuppy-educational-games-for-children/en">
+			<img alt="Yppy - Educational games for children" src="./images/icon-yuppy.jpg" class="icon" /><br/>
+			Yuppy
+		</a>
+	</div>
+	
+	<div class="app-row">		
+		<a href="https://apps.apple.com/gb/app/id1268392940" target="_blank">
+			<img alt="Animal Sounds Safari" src="./images/icon-animals.jpg"  class="icon" /><br/>
+			Animal Sounds Safari
+		</a>
+	</div>
+	
+	<div class="app-row">		
+		<a href="https://apps.apple.com/gb/app/id576805166" target="_blank">
+			<img alt="Cents - Micro-expense tracking" src="./images/icon-cents.jpg"  class="icon" /><br/>
+			Cents
+		</a>
+	</div>
 
-		<a href="http://taps.io/ODc5NDU"><img id="appstore2" src="images/cents/images/spacer.gif" alt="Download Cents" /></a>
-		
-		<span id="newsletter_invite">Want to know about updates? Sign up to the newsletter!</span>
-		
-		<div id="signup_form">
-			<div id="email_field">
-				<input id="email" type="text" placeholder="Your email">
-				<input id="email_submit" type="submit" value="Sign Up" onclick="signupNewsletter();return false;">
-			</div>
-			<div id="signup_result">You signed up successfully, we'll keep you posted ;)</div>
-			<div id="error"></div>
-		</div>	
-		
-		<div id="social_buttons">
-			<iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.studietto.com%2Fcents&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=false&amp;font&amp;colorscheme=light&amp;action=like&amp;height=21&amp;appId=532428813442362" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:105px; height:21px;" allowTransparency="true"></iframe>
-			
-			<a href="https://twitter.com/share" class="twitter-share-button" data-via="studietto">Tweet</a>
-			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-			
-			<!-- Place this tag where you want the +1 button to render. -->
-			<div class="g-plusone" data-size="medium"></div>
-			<!-- Place this tag after the last +1 button tag. -->
-			<script type="text/javascript">
-			  (function() {
-			    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-			    po.src = 'https://apis.google.com/js/plusone.js';
-			    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-			  })();
-			</script>
-        </div>	
-    </div>
-    <div class="push"></div> <!-- For Sticky Footer -->
-</div>
-
-<div id="footer">  
-<a id="contact" href="mailto:cents@studietto.com">Contact us for feedback and ideas</a>
-<span id="copyright">Copyright &copy; 2013 by Marco Bellinaso and Studietto</span>  
-</div>
-
-<script type="text/javascript" src="js/retina.js"></script>
-
-</body>
+	<h1>Android apps</h1>
+	<a href="https://play.google.com/store/apps/developer?id=Studietto" target="_blank">All the apps on the Play Store</a>
+	
+	<br/><br/><br/><br/><br/>
+	</body>
 </html>
