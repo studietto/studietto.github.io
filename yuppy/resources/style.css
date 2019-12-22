@@ -563,3 +563,11 @@ ul {
 .download-appstore {
 	margin-top: 30px;
 }
+
+.footer a {
+    color: #0ABCEB;
+}
+
+.footer a:hover {
+    color: yellow;
+}
