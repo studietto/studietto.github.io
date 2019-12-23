@@ -38,5 +38,30 @@
 	<a href="https://play.google.com/store/apps/developer?id=Studietto" target="_blank">All the apps on the Play Store</a>
 	
 	<br/><br/><br/><br/><br/>
+	
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCH-Q30EjphnQa-5rFbumGssaH_lWnIOe4",
+    authDomain: "studietto-website.firebaseapp.com",
+    databaseURL: "https://studietto-website.firebaseio.com",
+    projectId: "studietto-website",
+    storageBucket: "studietto-website.appspot.com",
+    messagingSenderId: "348069343701",
+    appId: "1:348069343701:web:d17d5653f1127c46880d5c",
+    measurementId: "G-7XM4K5PYSM"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+	
 	</body>
 </html>
