@@ -149,7 +149,7 @@ body {
 
 .header-running-text {
     text-align: center;
-    max-width: 287px;
+    max-width: 400px;
     line-height: 1.5;
     margin: auto;
 }
@@ -561,7 +561,8 @@ ul {
 }
 
 .download-appstore {
-	margin-top: 30px;
+	margin-top: 25px;
+	max-width: 250px;
 }
 
 .footer a {
